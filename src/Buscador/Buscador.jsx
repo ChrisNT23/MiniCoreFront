@@ -20,7 +20,7 @@ const Buscador = () => {
       const response = await axios.post('http://localhost:5000/buscar', { fechaVenta, fechaFin });
       setResultado(response.data);
     } catch (error) {
-      console.error('Error al buscar el producto más vendido:', error);
+      console.log('Error al buscar el producto más vendido:', error);
     }
   };
 
