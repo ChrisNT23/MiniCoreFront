@@ -17,7 +17,7 @@ const Buscador = () => {
 
   const handleBuscarClick = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/buscar', { fechaVenta, fechaFin });
+      const response = await axios.post(`${process.env.REACT_APP_API_KEY}/buscar`, { fechaVenta, fechaFin });
       setResultado(response.data);
     } catch (error) {
       console.log('Error al buscar el producto más vendido:', error);
